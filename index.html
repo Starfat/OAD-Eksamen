@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>OAD Eksamen</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1> Eksamen objektorientert analyse og design </h1>
+        <a download href="oppgaven.pdf"> Oppgaveteksten </a>
+        <hr>
+        <div class="row">
+            <h2> Besvarelser </h2>
+        </div>
+        <div class="row">
+            <ul>
+                <li> <a href="#main"> Overordnet struktur for domeneklassene </a> </li>
+                <li> <a href="#mainWindow"> Strukturanalyse (MainWindow) </a> </li>
+                <li> <a href="#apachePdfBox"> Detaljert strukturanalyse (Apache PDFBox) </a> </li>
+                <li> <a href="#dataChanged"> Aktivitets- og strukturdiagram (dataChanged) </a> </li>
+                <li> <a href="#sequence"> Sekvensdiagram for meldingsforløp </a> </li>
+            </ul>
+        </div>
+
+        Koden som er analysert i dette prosjektet er et relativt lite prosjekt. Prosjektets nytteverdi
+        er at den lar en bruke lete frem til PDF-filer på datamaskinen og søke igjennom disse. 
+        Et annet perspektiv på koden er at en viser hvordan man kan bruke java til å håndtere PDF-filer ved hjelp
+        av et bibliotek.
+
+        <br>
+         I diagrammene har vi brukt lilla for pakker, grønn for klasser og turkis for interface.
+        <hr>
+        <div class="row">
+            <a name="main"> </a>
+            <h2> Overordnet struktur for domeneklassene  </h2>
+        </div>
+        <div class="row">
+            Dette diagrammet viser helt overordnet hvordan det forskjellige domeneklassene sine relasjoner er kodet.
+            Diagrammet har kun inkludert domeneklasser, det vil si klasser som ikke tilhører java-rammeverket, men er laget spesifikt for dette
+            prosjektet.
+        </div>
+        <div class="row">
+            <img src="charts/main.svg">
+        </div>
+        
+        <hr>
+
+        <div class="row">
+            <a name="mainWindow"> </a>
+            <h2> Strukturanalyse (MainWindow) </h2>
+        </div>
+        <div class="row">
+            I dette diagrammet vises Java-rammeverksklassene som MainWindow-klassen bruker for å interagere med andre domeneklasser.
+        </div>
+        <div class="row">
+            <img src="charts/mainWindow.svg">
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <a name="apachePdfBox">  </a>
+            <h2> Detaljert strukturanalyse (Apache PDFBox) </h2>
+        </div>
+        <div class="row">
+            I diagrammet under vises strukturen i forholdet mellom PDFSearchMachine (domeneklasse) og klassene i
+            org.apache.pdfbox-pakken. Diagrammet fokuserer på strukturen mellom klassene og hvordan PDFSearchMachine benytter de underliggende
+            klassene i org.apache.pdfbox-pakken.
+        </div>
+        <div class="row">
+            <img src="charts/apachePdfBox.svg">
+        </div>
+
+        <hr>   
+
+        <div class="row">
+            <a name="dataChanged"> </a>
+            <h2> Aktivitets- og strukturdiagram (dataChanged) </h2>
+        </div>
+        <div class="row">
+            De to neste diagrammene viser hvordan dataChanged-metoden forholder seg til andre strukturer i koden.
+            Det første diagrammet er et strukturdiagram og det neste er et aktivitetsdiagram.
+        </div>
+        <div class="row">
+            <img src="charts/dataChanged.svg">
+        </div>
+        <div class="row">
+            <img src="charts/dataChanged_activityDiagram.svg">
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <a name="sequence"> </a>
+             <h2> Sekvensdiagram for meldingsforløp </h2>
+        </div>
+        <div class="row">
+            Under vises et diagram over sekvensen av funksjonskall som utføres i tråden som søker i PDF-filen.
+        </div>
+        <div class="row">
+            <img src="charts/sequence.svg">
+        </div>
+    </div>
+    </body> 
+</html>
